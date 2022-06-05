@@ -29,7 +29,8 @@ public class MainPage extends BasePage<MainPage> {
     }
 
     public DebitCardsPage openDebitCardsPage() {
-        wait.until(ExpectedConditions.elementToBeClickable(debitCardsPageLink)).click();
+        WebElement element = wait.until(ExpectedConditions.visibilityOf(debitCardsPageLink));
+        element.click();
         return new DebitCardsPage();
     }
 
